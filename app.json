@@ -30,7 +30,9 @@
       "expo-router"
     ],
     "experiments": {
+      "baseUrl": "/ui-components",
       "typedRoutes": true
+
     }
   }
 }
