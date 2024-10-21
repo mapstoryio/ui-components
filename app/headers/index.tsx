@@ -4,6 +4,7 @@ import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 
 import { useLivePreview } from "@payloadcms/live-preview-react";
+import { useEffect } from 'react';
 
 
 const Header =()=> {
@@ -22,6 +23,13 @@ export default function HomeScreen() {
     serverURL: "https://payload.demo.mapstory.io",
     depth: 2,
   });
+
+  useEffect(()=> {
+    console.log(data)
+
+  },[])
+
+
   return (
 
         <Text >{data ? JSON.stringify(data,null,2):"Welcome"}</Text>
