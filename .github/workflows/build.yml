@@ -57,7 +57,12 @@ jobs:
 #      run: yarn test
     - name: 📋 Export project
       run: npx expo export
-
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          name: 'github-pages'
+          path: 'dist'
 #    - name: 👷 Build app
 #      run: |
 #        eas build --local \
